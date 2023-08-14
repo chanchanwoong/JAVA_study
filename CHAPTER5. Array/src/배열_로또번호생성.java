@@ -29,17 +29,7 @@ public class 배열_로또번호생성 {
 		
 		
 		// ball[0] ~ ball[5] 까지를 오름차순으로 정렬해보기
-		int i, max = 0;
-		for(i=0;i<6;i++) {
-			max = ball[i];	// max를 일단 ball 인덱스로 초기화하여 하나씩 검사
-			
-			for(j=i+1;j<6;j++) {
-				if (max < ball[j]) {
-					max = ball[j];
-				}
-			}
-			ball[i] = max;
-		}
+		Arrays.sort(ball,0,6);		// 0이상 6미만 범위에서만 오름차순 정렬
 		System.out.printf("오름차순 배열의 값 : " + Arrays.toString(ball));
 	}
 
